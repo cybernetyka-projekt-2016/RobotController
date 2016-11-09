@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pg.gda.org.robotcontroller.CameraViewFragment">
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:layout_gravity="bottom|end"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/joystick"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        custom:JV_buttonColor="#FF0000"
+        custom:JV_borderColor="#0000FF"
+        custom:JV_backgroundColor="#82103896"
+        custom:JV_borderWidth="4dp"/>
+
+</FrameLayout>
