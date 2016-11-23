@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.java_websocket.client.WebSocketClient;
+import org.java_websocket.drafts.Draft_17;
 import org.java_websocket.handshake.ServerHandshake;
 
 import java.net.URI;
@@ -83,7 +84,7 @@ public class CameraViewFragment extends Fragment {
             return;
         }
 
-        mWebSocketClient = new WebSocketClient(uri) {
+        mWebSocketClient = new WebSocketClient(uri, new Draft_17()) {
             @Override
             public void onOpen(ServerHandshake serverHandshake) {
                 Log.i("Websocket", "Opened");
@@ -94,6 +95,7 @@ public class CameraViewFragment extends Fragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+
                     }
                 });
             }
